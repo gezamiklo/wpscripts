@@ -11,12 +11,13 @@ if (class_exists('WP_Customize_Control'))
 		 *
 		 * @param WP_Customize_Manager $manager
 		 */
-		public function __construct( $manager ) {
+		public function __construct( $manager, $id, $args = array() ) {
 			parent::__construct( $manager, 'gctfw_select_theme', array(
 				'label'    => __( 'Switch theme' ),
-				'section'  => 'gctfw_switch_theme',
+				'section'  => 'gctfw_theme_options',
 				'context'  => 'switch-theme',
 			) );
+			$this->type = 'gctfw_theme_control';
 		}
 
 		public function render_content() {
@@ -24,6 +25,7 @@ if (class_exists('WP_Customize_Control'))
 			$available_themes = wp_get_themes(array('allowed' => true));
 			$name = '_customize-radio-' . $this->id;
 			?>
+			<div  class="customize-control-content" style="height:300px; overflow: scroll;">
 			<?php
 			foreach ($available_themes as $theme)
 			{
@@ -43,6 +45,7 @@ if (class_exists('WP_Customize_Control'))
 			<?php
 			}
 			?>
+			</div>
 			<script>
 				var theme_changed = false;
 				jQuery('#save').click(
