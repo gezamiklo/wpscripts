@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Mr+Dafoe);
+
+* {
+	font-family: "Courier New",sans-serif ;
+	font-size: 13px;
+}
+
+.post-text {
+	font-family: serif;	
+}
+
+.blog-title {
+	font-family: cursive;
+	font-size: 5em !important;	
+}

@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Mr+Dafoe);
+
+* {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+}
+
+.post-text {
+	font-family: Verdana, Geneva, sans-serif;	
+}
+
+.blog-title {
+	font-family: 'Mr Dafoe', cursive;
+	font-size: 5em !important;	
+}

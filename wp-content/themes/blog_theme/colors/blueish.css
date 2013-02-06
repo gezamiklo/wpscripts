@@ -1,0 +1,11 @@
+body { background: #E5DFff; }
+#container { background: #eef; }
+a { color: #69968f; }
+.blog-title { color:#070f11; }
+.sidebar-box-title { 
+	color: #615c4b;
+	border-color: #e8e4ff;
+}
+.post-title { color: #3b93ff; }
+.post-meta { color:#A69Dff; }
+.post-meta a { color: #A69Dff;	}
