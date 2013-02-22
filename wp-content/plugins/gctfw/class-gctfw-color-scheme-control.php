@@ -17,7 +17,7 @@ if (class_exists('WP_Customize_Control'))
 		 */
 		public function __construct( $manager, $id, $args = array() ) {
 			parent::__construct( $manager, 'color_scheme', array(
-				'label'    => __( 'Switch color scheme' ),
+				'label'    => __( 'Switch color scheme','gctfw' ),
 				'section'  => 'gctfw_theme_options',
 				'context'  => 'switch-color-scheme',
 			) );
@@ -28,7 +28,7 @@ if (class_exists('WP_Customize_Control'))
 			$current_theme = wp_get_theme();
 			$theme_dir = $current_theme->get_template_directory();
 			$colors_dir = $theme_dir.'/colors/';
-			echo "Color scheme switch"."<br />";			
+			echo __("Color scheme switch",'gctfw')."<br />";			
 			?>
 			<div  class="customize-control-content">
 			<?php
@@ -39,7 +39,7 @@ if (class_exists('WP_Customize_Control'))
 				$current_scheme = get_theme_mod('color_scheme', 'default');
 				?>
 				<select  data-customize-setting-link="color_scheme" id="customize-control-color-scheme-select" class="color-scheme-select" name="theme_options[color_scheme]">
-					<option value="">Default</option>
+					<option value=""><?php echo __("Default",'gctfw');?></option>
 <?php
 				foreach ( $color_files as $color_file )
 				{

@@ -17,5 +17,13 @@
    
 	<div id="header">
     	<h1><a href="/" class="blog-title"><?php echo $blog_name ?></a></h1>
-        <img src="<?php echo get_template_directory_uri().'/header-sample.jpg'?>" id="header-image" width="980" height="100" />
+		<?
+		$header_image = get_header_image();
+		if ($header_image)
+		{
+		?>
+        <img src="<?php echo $header_image?>" id="header-image" width="980px" />
+		<?php
+		}
+		?>
     </div>

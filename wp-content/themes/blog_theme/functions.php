@@ -1,7 +1,8 @@
 <?php
+define( 'HEADER_IMAGE_WIDTH', 980 );
+define( 'HEADER_IMAGE_HEIGHT', 0 );
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
+add_theme_support('gctfw-supported');
+
+add_theme_support('post-thumbnails');
+add_image_size('excerpt_cropped', 200, 150, false);

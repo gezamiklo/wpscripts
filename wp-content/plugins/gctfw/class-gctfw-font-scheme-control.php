@@ -17,7 +17,7 @@ if (class_exists('WP_Customize_Control'))
 		 */
 		public function __construct( $manager, $id, $args = array() ) {
 			parent::__construct( $manager, 'font_scheme', array(
-				'label'    => __( 'Switch font scheme' ),
+				'label'    => __( 'Switch font scheme','gctfw' ),
 				'section'  => 'gctfw_theme_options',
 				'context'  => 'switch-font-scheme',
 			) );
@@ -28,7 +28,7 @@ if (class_exists('WP_Customize_Control'))
 			$current_theme = wp_get_theme();
 			$theme_dir = $current_theme->get_template_directory();
 			$fonts_dir = $theme_dir.'/fonts/';
-			echo "Font scheme switch"."<br />";
+			echo __("Font scheme switch",'gctfw')."<br />";
 			
 			$theme_options = get_theme_mod('theme_options');
 			?>
@@ -41,7 +41,7 @@ if (class_exists('WP_Customize_Control'))
 				$current_scheme = get_theme_mod('font_scheme', 'default')
 				?>
 				<select  data-customize-setting-link="font_scheme" name="theme_options[font_scheme]">
-					<option value="">Default</option>
+					<option value=""><?php echo __("Default",'gctfw');?></option>
 <?php
 				foreach ( $font_files as $font_file )
 				{

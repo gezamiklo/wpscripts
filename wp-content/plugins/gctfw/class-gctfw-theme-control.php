@@ -21,7 +21,6 @@ if (class_exists('WP_Customize_Control'))
 		}
 
 		public function render_content() {
-			echo "Temak listazasa...<br />";
 			$available_themes = wp_get_themes(array('allowed' => true));
 			$name = '_customize-radio-' . $this->id;
 			?>
@@ -34,7 +33,7 @@ if (class_exists('WP_Customize_Control'))
 				?>
 				<label>
 						<input type="radio" onclick="theme_changed=true;" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
-						<?php echo $theme->get('Name').' kiválasztasa'; ?><br/>
+						<?php echo __('Select: ','gctfw') . $theme->get('Name'); ?><br/>
 						<?php
 						if ($ss = $theme->get_screenshot())
 						{

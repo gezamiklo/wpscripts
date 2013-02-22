@@ -103,7 +103,31 @@ body, h1, h2, h3, h4, p, ul, li { margin: 0; padding: 0; }
 #comments{
     clear: both;
 }
-
+.comments_list ol, .comments_list ul{
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+}
+.comments_list li{
+	padding: 5px;
+	margin: 10px 0;
+}
+.comments_form{
+	clear: both;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+.comments_list .comment p{
+	padding: 10px 0 5px 0;
+	font-size: 1.1 em;
+}
+.comments_list .reply{
+	width: 100%;
+	text-align: right;
+	clear: both;
+	display:block;
+}
 /* SIDEBAR */
 
 .sidebar-box {
