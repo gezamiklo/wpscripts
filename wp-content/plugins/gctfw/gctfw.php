@@ -168,7 +168,8 @@ class gcThemeFramework{
 			
 			if ( ($k == 'gctfw_select_theme') && ( strlen( $setting->post_value() ) ) )
 			{
-				switch_theme($setting->post_value());
+				//For compatibility < 3.5.0, we have to pass the value twice :S
+				switch_theme($setting->post_value(), $setting->post_value());
 			}
 		}
 	}
