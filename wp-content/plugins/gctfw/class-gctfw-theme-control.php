@@ -33,7 +33,7 @@ if (class_exists('WP_Customize_Control'))
 				?>
 				<label>
 						<input type="radio" onclick="theme_changed=true;" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?> />
-						<?php echo __('Select: ','gctfw') . $theme->get('Name'); ?><br/>
+						<?php echo $theme->get('Name') . __(' kiválasztása','gctfw'); ?><br/>
 						<?php
 						if ($ss = $theme->get_screenshot())
 						{
